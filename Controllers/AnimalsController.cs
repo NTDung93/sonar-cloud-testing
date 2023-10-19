@@ -39,7 +39,7 @@ namespace API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest();
             var animaslDto = _mapper.Map<IEnumerable<AnimalDto>>(animals);
-            return Ok(aaa);
+            return Ok(animaslDto);
         }
 
         // GET: api/Animals/5

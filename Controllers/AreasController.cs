@@ -24,7 +24,7 @@ namespace API.Controllers
             var areas = await _areasRepo.GetListArea();
             if (!ModelState.IsValid)
                 return BadRequest();
-            var areas = _mapper.Map<IEnumerable<AreaDto>>(areas);
+            var areasDto = _mapper.Map<IEnumerable<AreaDto>>(areas);
             return Ok(areasDto);
         }
 
